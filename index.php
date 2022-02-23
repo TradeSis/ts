@@ -2,7 +2,7 @@
 
 /*VERSAO Projetos public 23/02/2022*/
 
-/* helio escreveu na develop_helio */
+/* helio escreveu na develop_helio _ e deixou lá */
 
 //header
 header("Access-Control-Allow-Origin: *");
