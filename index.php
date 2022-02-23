@@ -2,6 +2,7 @@
 
 /*VERSAO Projetos public 23/02/2022*/
 
+/* helio escreveu na principal protegida */
 
 //header
 header("Access-Control-Allow-Origin: *");
