@@ -1,7 +1,6 @@
 <?php
 
-/*VERSAO Projetos public 23/02/2022*/
-
+/*VERSAO ts 23/02/2022*/
 
 //header
 header("Access-Control-Allow-Origin: *");
