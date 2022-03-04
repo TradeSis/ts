@@ -1,0 +1,47 @@
+
+curl -X GET "https://www.bling.com.br/Api/v2/notasservico/json/"  -G  -d "filters=dataEmissao[20/12/2021 TO 20/12/2021]; situacao[2]"  -d "apikey=4786635b05aea01e68cbb39e9d34f6a21dc482e6c0aa5b20b0f088612fdbe4bf0c32f02c"
+
+EXEMPLO DASH BOARD
+https://app.powerbi.com/view?r=eyJrIjoiYzk5NTczYTQtZTZiOS00MzdmLWJjYzItMDhmOTMxNWY5MTZlIiwidCI6ImI4MTMxZmY5LTcwZmUtNGRjZS05NDllLTgyMjU5MTk5MDZlMiJ9
+
+
+API BLING
+https://www.bling.com.br/Api/v2/notasservico/json/?apikey=4786635b05aea01e68cbb39e9d34f6a21dc482e6c0aa5b20b0f088612fdbe4bf0c32f02c&filters=dataEmissao[20/12/2021%20TO%2020/12/2021];%20situacao[2]
+
+API BLING - API TSWEB
+http://localhost/tsweb/api/tsbling/buscaServicos?filters=dataEmissao[20/12/2021%20TO%2020/12/2021];%20situacao[2]
+
+
+ACESSO mysql
+https://auth-db486.hostinger.com/index.php?db=u384787522_tswebdev
+user: u384787522_helio pass: 2Et*MNY1oJul
+
+
+PEGA MYSQL em JSON
+http://localhost/tsweb/php/buscaparcelas.php
+
+Pega MYSQL Formatado
+http://localhost/tsweb/php/pegamysql.php
+
+Pega MYSQL - API TSWEB
+http://localhost/tsweb/api/dbmy/consultaParcelas
+
+CRUD EXEMPLO
+http://localhost/tsweb/erp/webix-crud/
+
+
+hpanel.hostinger.com
+
+lp.comcacau.com.br 
+	mysql db=u384787522_cJQrg
+
+chocolatebrasileiro.com.br
+	mysql db=u384787522_o6Gnu
+	tabela wp-options
+		wp_users
+		
+	
+tradesis.com.br 
+	mysql db=u384787522_FBOFg
+	
+	
