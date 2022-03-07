@@ -1,1 +1,1 @@
-# ts - app padrão
+# ts - app
