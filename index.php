@@ -227,10 +227,13 @@ switch ($aplicacao) {
         require  "./erp/testes/menu.php";
         break;
 
-        case "vision":
+    case "vision":
             require  "./tsvision/app.php";
             break;
 
+    case "services":
+        require  "./tsservices/app.php";
+        break;
    default:
 
    echo "Aplicacao ".$aplicacao." não identificada.";
