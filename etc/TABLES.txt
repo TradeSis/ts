@@ -1,0 +1,78 @@
+
+CREATE TABLE empresa(
+ empresa char(45)	not null,
+   PRIMARY KEY (empresa)
+);
+
+CREATE TABLE aplicacao(
+   aplicacao VARCHAR (20)      NOT NULL,
+   PRIMARY KEY (aplicacao)
+
+);
+
+CREATE TABLE aplicacaoEmpresa(
+  empresa char(45)	not null,
+   aplicacao VARCHAR (20)      NOT NULL,
+   PRIMARY KEY (empresa, aplicacao),
+   FOREIGN KEY(empresa) REFERENCES empresa(empresa),
+   FOREIGN KEY(aplicacao) REFERENCES aplicacao(aplicacao)
+);
+
+CREATE TABLE usuario(
+   email VARCHAR (50)      NOT NULL,
+   empresa char(45)	not null,
+   nome VARCHAR (50)      NOT NULL,
+   senha VARCHAR(50) NOT NULL,
+   PRIMARY KEY (email),
+   CONSTRAINT empresa_email UNIQUE (empresa,email),
+   FOREIGN KEY(empresa) REFERENCES empresa(empresa)
+);
+
+CREATE TABLE cliente(
+  empresa char(45)	not null,
+   clienteCodigo VARCHAR (20)      NOT NULL,
+   nomeCliente VARCHAR (50)     NOT NULL,
+   PRIMARY KEY (empresa, clienteCodigo),
+   FOREIGN KEY(empresa) REFERENCES empresa(empresa)
+);
+
+CREATE TABLE notaVenda(
+   empresa char(45)	not null,
+   tipoVenda char(25) not null,
+   clienteCodigo VARCHAR (20)   NOT NULL,
+   dataVenda  date       NOT NULL,
+   numeroNF  VARCHAR (44) NOT NULL ,
+   statusNF  char (45), 
+   qtdVenda	int 	not null,
+   valorVenda   DECIMAL (18, 2) NOT NULL,    
+   valorCusto   DECIMAL (18, 2) NOT NULL,    
+   PRIMARY KEY (empresa,tipoVenda,dataVenda,clienteCodigo,numeroNF),
+   FOREIGN KEY(empresa) REFERENCES empresa(empresa)
+);
+
+CREATE TABLE statusServico(
+   statusSer  char (45), 
+   PRIMARY KEY (statusSer)
+  
+);
+
+CREATE TABLE servicos(
+   ID INT not null AUTO_INCREMENT	,
+   empresa char(45)	not null,
+   clienteCodigo VARCHAR (20)   NOT NULL,
+   titulo	varchar(60) not null,
+   descricao	varchar(300) not null,
+   dataInclusao  date       NOT NULL,
+   dataAprovacao  date,
+   dataEntrega  date,
+   dataEncerramento  date,   
+   valor   DECIMAL (18, 2) NOT NULL,      
+   horas	INT,
+   vlrHora DECIMAL (18, 2),
+   statusSer  char (45), 
+   PRIMARY KEY (ID),
+   INDEX servicoCliente (empresa,clienteCodigo,dataInclusao),
+  FOREIGN KEY(empresa) REFERENCES empresa(empresa),
+  FOREIGN KEY(empresa,clienteCodigo) REFERENCES cliente(empresa,clienteCodigo)
+);
+

@@ -1,0 +1,29 @@
+Definições TradeSis
+
+estrutura app
+
+site/ts/index.php
+	é controlado a partir de .htaccess
+	controlar para que o index.php não apareça
+		e verificar se a "aplicacao" está cadastrada
+	controla a session php, caso não inicializada para solicitar sempre login
+
+site/ts/login
+	controle de login para todas as aplicações
+		verifica se login (email) existe,
+		verifica se senha está correta,
+		verifica se aplicação esta liberada para empresa
+		
+	devolve empresa, nome do usuario 
+
+
+site/ts/aplicacao
+
+	aplicação sempre tem um programa de menu
+		tsaplicacao/menu.php
+		tsaplicacao/menu.js
+	aplicação sempre tem um programa de inicialização principal	
+		tsaplicacao/app.php
+		tsaplicacao/app.js
+
+
