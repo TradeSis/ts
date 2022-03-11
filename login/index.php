@@ -91,7 +91,7 @@
             width:300,
             position:"center",
             modal:true,
-            head:"LOGIN NO SISTEMA",
+            head:"Informe seus dados!!!",
             body:webix.copy(form)
         }).show();
 

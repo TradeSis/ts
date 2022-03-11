@@ -23,15 +23,9 @@
         $email = stripcslashes($email);  
         $senha = stripcslashes($senha);  
 
-    //   echo "email=".$email."\n";
-    //   echo "password=".$password."\n";
-    //   echo $URL;
-
-
         $query = "select * from usuario where email = '$email'";  
 
         $result = mysqli_query($con,$query);
-     //   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
         $count = mysqli_num_rows($result);  
         
         $retorno = [];
@@ -40,9 +34,7 @@
                     $retorno = $row;
           }
         }
-       // var_dump($retorno);
-
-        mysqli_close($con);
+      
 
 
           
@@ -53,6 +45,24 @@
                    $_SESSION["EMAIL"]   = $retorno["email"];
                    $_SESSION["EMPRESA"] = $retorno["empresa"];
                    $_SESSION["USUARIO"] = $retorno["nome"];
+                   $empresa = $_SESSION["EMPRESA"];
+                   $query = "SELECT * FROM aplicacaoEmpresa WHERE aplicacaoEmpresa.empresa = '$empresa'";  
+
+                   $result = mysqli_query($con,$query);
+                   $retorno["menuAplicacao"] = [];
+                  // $_SESSION["MENU"] = {};
+                   
+                   if($result){
+                        while($row = mysqli_fetch_assoc($result)){
+                         //   array_push($retorno["aplicacao"]["aplicacao"], $row["aplicacao"]);
+                         $retorno["menuAplicacao"][] = array("aplicacao" => $row["aplicacao"]);
+                        }    
+                        //$_SESSION["MENU"] = $retorno["aplicacao"]; 
+                        $_SESSION["MENU"] = $retorno["menuAplicacao"];
+                           
+                     //   print_r( $_SESSION["MENU"]);  
+                         // echo json_encode($_SESSION["MENU"]);
+                    }
 
 
                     
@@ -65,5 +75,7 @@
         }  
         else{  
             echo "User ".$email." Não Cadastrado";
-        }     
+        }   
+        mysqli_close($con);
+
 ?> 

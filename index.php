@@ -22,13 +22,16 @@
     
         $ex = explode("/", $uri_parse);
         $ex = array_filter(array_values($ex));
-    
+        if(isset($ex[1])){
+            $APLICACAO = $ex[1];
+        }
+        
         if(isset($ex[2])){
             $APLICACAO = $ex[2];
         }
-    if ($APLICACAO=="vision"||
-        $APLICACAO=="services"||
-        $APLICACAO=="dashboard") {
+    if ($APLICACAO=="ts"
+            /*||$APLICACAO=="vision"*/
+        ) {
         } else {
             echo "Aplicacao ".$APLICACAO." não identificada.";    
             session_destroy();
@@ -73,20 +76,14 @@
   //  echo "URL=".$URL."\n";
   //  echo "APLICACAO=".$APLICACAO."\n";
 
-    var_dump($_SESSION);
+    //var_dump($_SESSION);
     
 
     switch ($APLICACAO) {
-        case "vision": // Visões e DashBoards
-            require "./tsvision/index.php";
-        break;
-        case "services": // Controle de Serviçõs 
-            require "./tsservices/index.php";
-        break;  
-    
-        case "web": // Sistema de Gestão Interna
-            require "./tsweb/index.php";
-        break;                       
+ 
+        case "ts": // Sistema de Gestão Interna
+            require "./login/menu.php";
+        break;                      
         default:
 
         echo "Aplicacao ".$APLICACAO." não identificada. EMAIL: " .$EMAIL;    

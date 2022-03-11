@@ -1,8 +1,34 @@
+<?php
+	if (session_status() !== PHP_SESSION_ACTIVE) {
+		session_start();
+	}
+	
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!-- Webix Library -->
+	<script src="/ts/js/jquery/jquery.min.js" type="text/javascript"></script>	
+	<script type="text/javascript"          src="/ts/js/webix/codebase/webix.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/ts/js/webix/codebase/skins/flat.min.css">
 
 
-var wMenuApps = {
-  "value": "Apps",
-  "id" : "wmApps",
+	<!-- Design -->
+	<link rel="stylesheet" type="text/css" href="/ts/login/menu.css">	
+	<style>
+		
+	
+				
+
+	</style>
+	<script type="text/javascript">
+		/* MENU TS/SERVICES */
+
+var wMenuWeb = {
+  "value": "Web",
+  "id" : "wMenuWeb",
 
   labelAlign:"right",
   config:{
@@ -13,16 +39,73 @@ var wMenuApps = {
     }
   },
   "submenu": [
-    { id:"/ts/erp/apppadrao/app.php", value: "App Padrão v1"},
-    { id:"/ts/erp/appbling/bling.php", value: "App BLING v1"}
+    { id:"/ts/tsweb/clientes.php", value: "Clientes"}
+    
   ]
 };
 
+var wMenuServices = {
+  "value": "Services",
+  "id" : "wMenuServices",
+
+  labelAlign:"right",
+  config:{
+    on: {
+      onItemClick:function(id){
+        $$("menuIframe").define("src", id);
+      }
+    }
+  },
+  "submenu": [
+    { id:"/ts/tsservices/servicos.php", value: "Serviços"}
+    
+  ]
+};
+
+var wMenuVision= {
+  "value": "Vision",
+  "id" : "wMenuVision",
+
+  labelAlign:"right",
+  config:{
+    on: {
+      onItemClick:function(id){
+        $$("menuIframe").define("src", id);
+      }
+    }
+  },
+  "submenu": [
+    { id:"/ts/tsvision/index.php", value: "Visões"}
+    
+  ]
+};
+
+var wmenuData = [];
+
+var wmenuAplicacao = <?php echo json_encode($_SESSION['MENU']) ?>;
+
+
+     var i = 0;
+     for(i in wmenuAplicacao) {
+      //	alert("CAMPO= "+JSON.stringify(wmenuAplicacao[i], null, 4));
+       if (wmenuAplicacao[i]["aplicacao"]=="services") {
+			wmenuData.push(wMenuServices);
+	   }
+	   if (wmenuAplicacao[i]["aplicacao"]=="vision") {
+		
+		   wmenuData.push(wMenuVision);
+	   }
+     
+	   if (wmenuAplicacao[i]["aplicacao"]=="web") {
+		       wmenuData.push(wMenuWeb);
+      }
+
+     };
+
+
 var wMenu = {
   "id": "wMenu",
-  "data":[  
-            wMenuApps
-         ],
+  "data": wmenuData,
 
  // "layout": "x",
   "type": {
@@ -61,18 +144,12 @@ var wMenuBotoes = {
        on:{
         // the default click behavior that is true for any datatable cell
         "onItemClick":function(id, e, trg){ 
-           // webix.message("Click on row: " + id.row+", column: " + id.column)
-            var wURL = "/ts/matacookie.php";
-           // alert(wURL);
-            var wdestino = chamaAJAX (wURL);
-          //  alert(wdestino);
-
+			
+			
             this.getTopParentView().hide(); //hide window
-            if (wdestino == "/ts/dashboard"){
-              window.location.href="/ts/login";
-            } else {
-              window.location.href=wdestino;
-            }
+            <?php session_destroy(); ?>;
+              window.location.href="/ts";
+           
             
 
         }
@@ -82,8 +159,13 @@ var wMenuBotoes = {
   
   width:300
 };
+
 var wlogo =  { view: "label", label: "", width: 160, autoheight:true, css:'app-logo' };
 var wlogoempresa =  { id:"logoempresa", view: "label", label: "tt", width: 160, autoheight:true};
+
+
+
+
 
 var wcabec =
 {
@@ -102,7 +184,7 @@ var wframe = {
   animate:{ type:"flip", subtype:"vertical" },
   "disabled": false,
   "height": 0,
-  "src": ""
+  "src": "" //"/ts/tsweb/clientes.php"
 };
 
 var ui = {
@@ -124,15 +206,11 @@ var ui = {
       webix.ui.fullScreen();
       webix.ui(ui);
       
-      var wURL = "/ts/pegacookie.php";
+   
+      var wempresa = "<?php print $_SESSION['EMPRESA']; ?>";
+      var wusuario = "<?php print $_SESSION['USUARIO']; ?>";
+     
 
-      var wcookie = chamaAJAX (wURL);
-      //alert(wcookie);
-      var warraysplit = (wcookie.split('|'));
-
-      var wempresa  = warraysplit[0];
-     // alert("dashboard"+wempresa);
-      var wusuario  = warraysplit[1];
       $$("logoempresa").define("label",wempresa);
       $$("logoempresa").refresh();
       $$("btnusuario").define("label", wusuario);
@@ -145,15 +223,15 @@ var ui = {
     
     var wURL = '';
 
-	function chamaAJAX(wURL) {
+	function chamaAJAX(wURL,wtype,wdataType) {
         var res = "";
         
          $.ajax({
                 url: wURL,
-                type: "get",
+                type: wtype,
                 async: false,
 
-                dataType: "text",
+                dataType: wdataType,
               
                 success: function (json_get) {
 
@@ -171,3 +249,9 @@ var ui = {
     
    
 
+
+	</script>
+	
+</head>
+<body></body>
+</html>
