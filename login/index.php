@@ -1,3 +1,13 @@
+<?php
+	if (session_status() !== PHP_SESSION_ACTIVE) {
+		//session_start();
+		return;
+	}
+	
+	$wURLORIGEM = $_SESSION["URL"];
+	
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -13,50 +23,47 @@
 
 		<div id="container">    
         </div>    
+	
 
 		<script type="text/javascript" charset="utf-8">
-					//alert(location.search);	
-						var warraysplit = (location.search.split('='));
-						var wURLORIGEM  = warraysplit[1];
-						if (!wURLORIGEM) {
-							wURLORIGEM = "/ts/dashboard";
-						}
-						
+					
+		var wURLORIGEM = "<?php print $wURLORIGEM; ?>";
 
 		var form = {
 			view:"form",
 			borderless:true,
 			elements: [
-				{ view:"text", label:'Login', name:"login", id:"user" },
-				{ view:"text", label:'Senha', name:"password" , id:"password",type:"password"},
+				{ view:"text", label:'E-Mail', name:"email", id:"email" },
+				{ view:"text", label:'Senha', name:"senha" , id:"senha",type:"password"},
 				{ view:"button", value: "login", click:function(){
 					if (this.getParentView().validate()){ //validate form
                       //  webix.message("All is correct");
-						var wuser = $$("user").getValue();
-						var wpass = $$("password").getValue();
+						var wemail = $$("email").getValue();
+						var wsenha = $$("senha").getValue();
 						
 						
+					//	alert(wemail + "-" + wsenha);
 
-						var wURL = "/ts/authentication.php?" + 
-										"user=" + wuser + 
-										"&pass=" + wpass +
-										"&URL=" + wURLORIGEM;
-					 		//alert(wURL);
+						var wURL = "/ts/login/authentication.php?" + 
+										"email=" + wemail + 
+										"&senha=" + wsenha;
+					// 	alert(wURL);
 
 						var wretorno = chamaAJAX (wURL);
 						wretorno = wretorno.trim();
-						//alert("wretorno1="+wretorno);
+					//	alert("wretorno1="+wretorno);
  					
                         if (wretorno!="OK"){
-							//alert("wretorno2="+wretorno);
+					//		alert("wretorno2="+wretorno);
 
 						    document.getElementById("container").innerHTML = wretorno;
 						
 
                         } else {
-							//alert("wretorno3="+wretorno);
+					//		alert("wretorno3="+wretorno);
 							this.getTopParentView().hide(); //hide window
-							//alert(wURLORIGEM);
+						//	alert(wURLORIGEM);
+                            this.destructor();
 							window.location.href=wURLORIGEM;
 						};
                         
@@ -71,7 +78,7 @@
 			],
 			rules:{
 				
-				"login":webix.rules.isNotEmpty
+				"email":webix.rules.isNotEmpty
 			},
 			elementsConfig:{
 				labelPosition:"top",
@@ -84,7 +91,7 @@
             width:300,
             position:"center",
             modal:true,
-            head:"LOGIN NO SISTEMA",
+            head:"Informe seus dados!!!",
             body:webix.copy(form)
         }).show();
 

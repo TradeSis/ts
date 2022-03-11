@@ -1,0 +1,26 @@
+QUERYs
+
+SELECT tipoVenda, 
+       statusNF, 
+       YEAR(dataVenda) as Ano, 
+       MONTH(dataVenda) as Mes, 
+	   SUM(valorVenda) as valorVenda,
+       SUM(qtdVenda)   as qtdVenda
+FROM empresa, notaVenda
+where 
+	empresa.empresa = "TRADESIS" AND
+    notaVenda.empresa = empresa.empresa 
+GROUP BY 
+	   tipoVenda, 
+       statusNF, 
+       YEAR(dataVenda),
+       MONTH(dataVenda);
+	   
+	   
+SELECT notaVenda.empresa, tipoVenda, statusNF, YEAR(dataVenda), MONTH(dataVenda), 
+cliente.nomeCliente, 
+SUM(valorVenda) , SUM(qtdVenda) ,
+SUM(valorVenda) / SUM(qtdVenda) 
+FROM notaVenda, cliente
+where cliente.empresa = notaVenda.empresa and cliente.clienteCodigo = notaVenda.clienteCodigo
+GROUP BY notaVenda.empresa, tipoVenda, statusNF, YEAR(dataVenda), MONTH(dataVenda), cliente.nomeCliente;
