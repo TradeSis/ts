@@ -45,3 +45,64 @@ tradesis.com.br
 	mysql db=u384787522_FBOFg
 	
 Ajuste na develop
+
+MARKETPLACES
+	plataformas
+		https://www.addsuite.com.br/
+		https://www.ideianoar.com.br/#plataforma
+		https://go2b.com.br/
+		http://lojamp6.chleba.net/roupas/teste-n2
+		https://www.chleba.net/
+		http://oktene.addsuite.io/equipamentos/perfuracao
+		http://oktene.addsuite.io/quero-vender/apresentacao
+		https://santomarketplace.com.br/vestuario/jaquetas/jaqueta-corta-vento-medalha-de-sao-bento-sku1129
+		https://feiradebebevirtual.com.br/lojas
+		https://www.ficadicabenedita.com.br/quero-vender/dados-iniciais
+		
+
+WORDPRESS
+	como instalar localmente
+		https://www.mirago.com.br/aula/como-instalar-wordpress-localhost/
+		http://shipit.resultadosdigitais.com.br/blog/dicas-para-melhorar-seu-workflow-de-desenvolvimento-wordpress-parte-2/
+	Cursos
+		https://www.udemy.com/course/criacao-de-sites-com-wordpress/
+		https://www.udemy.com/course/lojavirtual/
+		https://www.udemy.com/course/loja-virtual-com-php-7-painel-administrativo/
+		
+		
+		
+
+WEBIX EXEMPLOS
+	https://webix.com/demos/team-progress/#!/top/dashboard
+	https://webix.com/demos/booking-app/#!/top/specialoffers
+	https://webix.com/demos/bank-app/#!/top/transactions
+	https://webix.com/demos/student-dashboard/
+	https://ichi.pro/pt/criacao-de-um-aplicativo-de-reserva-com-webix-ui-55945946392473
+	https://webix.com/demos/admin-app/#!/main/dash
+	https://blog.webix.com/creating-a-todolist-app-with-webix-ui/
+	https://blog.webix.com/creating-a-time-tracker-app-with-webix-ui/
+		https://serhiipylypchuk1991.github.io/webix-time-tracker-app/
+		https://github.com/serhiipylypchuk1991/webix-time-tracker-app
+	https://github.com/serhiipylypchuk1991/car-rental-service
+	
+	
+Importar excel
+	http://localhost/ts/testes/Excel/ImportExcel/excel.php
+MUlti Telas num mesmo programa
+	http://localhost/ts/testes/exemplos/webix-crud/
+funcoes na toolbar 
+	filtro no datatable
+	http://localhost/ts/testes/exemplos/webix-time-tracker-app-master/
+filtros datatable	
+	http://localhost/ts/testes/exemplos/car-rental-service-master/
+exemplo de dash
+	https://webix.com/demos/admin-app/#!/main/dash
+	
+
+WEBIX definições
+	https://docs.webix.com/api__ui.layout_type_config.html
+	
+	widgets
+	https://webix.com/widgets/?utm_source=docs.webix.com
+	https://webix.com/widget/grouping/#fieldsetControl
+	

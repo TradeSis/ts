@@ -76,3 +76,13 @@ CREATE TABLE servicos(
   FOREIGN KEY(empresa,clienteCodigo) REFERENCES cliente(empresa,clienteCodigo)
 );
 
+CREATE TABLE `parcelas` (
+  `codigoCliente` int(11) NOT NULL,
+  `numContrato` int(11) NOT NULL,
+  `numParcela` int(11) NOT NULL,
+  `dtemi` date NOT NULL,
+  `dtven` date NOT NULL,
+  `valor` decimal(10,2) NOT NULL,
+  `dtpag` date DEFAULT NULL,
+   PRIMARY KEY (codigoCliente,numContrato,numParcela)
+)
