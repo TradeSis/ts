@@ -24,3 +24,22 @@ SUM(valorVenda) / SUM(qtdVenda)
 FROM notaVenda, cliente
 where cliente.empresa = notaVenda.empresa and cliente.clienteCodigo = notaVenda.clienteCodigo
 GROUP BY notaVenda.empresa, tipoVenda, statusNF, YEAR(dataVenda), MONTH(dataVenda), cliente.nomeCliente;
+
+
+SELECT notaVenda.empresa, 
+	
+       year(notaVenda.dataVenda) as 'ano',
+       month(notaVenda.dataVenda) as 'mes',
+
+       sum(notaVenda.valorVenda) as 'vlrVendas',
+       sum(notaVenda.qtdVenda) as 'qtdVendas'
+       
+       FROM notaVenda
+       where year(notaVenda.dataVenda) >= 2022 - 2
+ GROUP by 
+ 	notaVenda.empresa, 
+ 
+    year(notaVenda.dataVenda),
+    month(notaVenda.dataVenda);
+
+    

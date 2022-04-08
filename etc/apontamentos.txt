@@ -45,3 +45,148 @@ tradesis.com.br
 	mysql db=u384787522_FBOFg
 	
 Ajuste na develop
+
+
+Cursos
+	Funil de Vendas
+		https://www.udemy.com/course/marketing-digital-funil-de-vendas/
+		
+
+UDEMY
+	https://www.udemy.com/home/my-courses/learning/
+		tradesis@tradesis.com.br 
+		2Et*MNY1oJul
+
+
+
+WORDPRESS
+	como instalar localmente
+		tradesis testes alterar senha do banco local para ''
+		criar conta do elementor
+			http://localhost/ts/tsplace/wordpress/wp-admin/admin.php?page=elementor-app#onboarding
+	DEPLOY
+		https://www.youtube.com/watch?v=9Urf78n0ICA
+		
+	Customizando
+		https://tableless.com.br/javascript-e-css-no-wordpress/
+		https://woocommerce.com/document/composite-products/composite-products-js-api-reference/
+	
+		https://www.mirago.com.br/aula/como-instalar-wordpress-localhost/
+		http://shipit.resultadosdigitais.com.br/blog/dicas-para-melhorar-seu-workflow-de-desenvolvimento-wordpress-parte-2/
+	Cursos
+		https://www.udemy.com/share/101srU3@a7595iqp_b5Io7nzf7lAsQ3WZa9Rk5imgkkIh74aZgNzbPTR3IBgm7_RJp-HBvlECw==/
+		https://www.udemy.com/share/101J5M3@2tKq0yLF5pxU_PDQ0BQwpQJSV_g7bDBcpBlUq3q8ca6cBLbav69DAmdp8ZetvlmLuQ==/
+		https://www.udemy.com/share/101srU3@kcBNLBiOSvatTKbabfVttegnUNf5py-IH3uUU7naNVT3YxKIBC9CWbI5ItvoAKQxnw==/
+		https://www.udemy.com/share/101srU3@NODgMCR3UelOJX1KV3XagxLIet6Y4YXCF1TLXJ8Muh498FoeAxJmWgueWobO3fiMTQ==/
+	
+	TRADUZIR
+		https://www.canalwp.com/plugins-wordpress/traduzir-temas-plugins-wordpress-dashboard/#:~:text=Ap%C3%B3s%20a%20instala%C3%A7%C3%A3o%20e%20ativa%C3%A7%C3%A3o,levar%20para%20a%20mesma%20p%C3%A1gina.
+		https://www.canalwp.com/guia-do-iniciante/aprenda-como-traduzir-o-seu-tema-wordpress/
+		
+2021PM25
+		
+	Como usar git 
+		https://www.andrebian.com/workflow-wordpress-com-git/
+		https://github.com/github/gitignore/blob/main/WordPress.gitignore
+		https://www.affde.com/pt/wordpress-github.html
+	Elementor
+		https://elementor.com/pricing-plugin/
+		
+		
+		
+
+WEBIX EXEMPLOS
+	https://webix.com/demos/team-progress/#!/top/dashboard
+	https://webix.com/demos/booking-app/#!/top/specialoffers
+	https://webix.com/demos/bank-app/#!/top/transactions
+	https://webix.com/demos/student-dashboard/
+	https://ichi.pro/pt/criacao-de-um-aplicativo-de-reserva-com-webix-ui-55945946392473
+	https://webix.com/demos/admin-app/#!/main/dash
+	https://blog.webix.com/creating-a-todolist-app-with-webix-ui/
+	https://blog.webix.com/creating-a-time-tracker-app-with-webix-ui/
+		https://serhiipylypchuk1991.github.io/webix-time-tracker-app/
+		https://github.com/serhiipylypchuk1991/webix-time-tracker-app
+	https://github.com/serhiipylypchuk1991/car-rental-service
+	
+	
+Importar excel
+	http://localhost/ts/testes/Excel/ImportExcel/excel.php
+MUlti Telas num mesmo programa
+	http://localhost/ts/testes/exemplos/webix-crud/
+funcoes na toolbar 
+	filtro no datatable
+	http://localhost/ts/testes/exemplos/webix-time-tracker-app-master/
+filtros datatable	
+	http://localhost/ts/testes/exemplos/car-rental-service-master/
+exemplo de dash
+	https://webix.com/demos/admin-app/#!/main/dash
+	
+
+WEBIX definições
+	https://docs.webix.com/api__ui.layout_type_config.html
+	
+	widgets
+	https://webix.com/widgets/?utm_source=docs.webix.com
+	https://webix.com/widget/grouping/#fieldsetControl
+
+
+
+
+TRADESIS
+	SISTEMA DE TAREFAS
+		http://querysystemsi.com/sistemas/tarefas/index.php
+		https://github.com/satellasoft/OpenTask https://www.youtube.com/watch?v=b-1hya5kBSg
+		https://scriptcerto.com.br/produto/sistema-php-para-controle-de-projetos-p-agencias-e-freelancers/
+		https://playsis.com.br/
+		
+	CONCORRENTES
+		https://hubmarket.com.br/case/on-my-way/
+		https://hub2go.com.br/
+		https://marketplaceclub.com.br/
+		https://www.addsuite.com.br/
+		https://www.ideianoar.com.br/#plataforma
+		https://go2b.com.br/
+		
+	EXEMPLOS MARKETPLACE
+			https://santomarketplace.com.br/vestuario/jaquetas/jaqueta-corta-vento-medalha-de-sao-bento-sku1129
+			http://oktene.addsuite.io/equipamentos/perfuracao
+			https://feiradebebevirtual.com.br/lojas
+			https://www.ficadicabenedita.com.br/quero-vender/dados-iniciais
+			https://scriptcerto.com.br/produto/plataforma-para-marketplace-completa-com-multi-lojasvendedores-script-place-v4/
+			https://www.ofertasdigitais.com.br/	
+			
+TS PLACE
+	AJUSTES
+		Traduzir Plugins e Tema
+	Temas
+		Hello Elementor
+		Page Builder FrameWork
+	ELEMENTOR PRO
+		https://elementor.com/help/activate-your-license-key/
+		
+	MARKETPLACE
+		INTEGRAÇÃO BLING
+			https://ajuda.bling.com.br/hc/pt-br/articles/360037984974-Integra%C3%A7%C3%A3o-com-a-WooCommerce
+			https://hub2b.com.br/integracoes
+			https://github.com/organisys/bling-woocommerce
+			
+		WCFM PLUGIN
+			https://wclovers.com/
+			MANUAL
+				https://docs.wclovers.com/store-shipping/
+			SPLIT DE PAGAMENTOS
+				https://wclovers.com/knowledgebase/wcfm-marketplace-custom-payment-gateway-developers-guide/
+		PAGAMENTOS
+			https://www.mercadopago.com.br/ferramentas-para-vender/link-de-pagamento-plugins-checkout/plugins/vender-woocommerce?utm_experiment=optimize&matt_tool=89500993&matt_word=MLB_MP_G_AO_OP_COW_SEARCH_SELL_CONV_WOOCOMMERCE&gclid=Cj0KCQjw_4-SBhCgARIsAAlegrVuRMfGmFHhSP6UNsqYytI3DwS0zcLAusGNjwb9XbPBUDeWItO7KCkaAr1xEALw_wcB
+	
+		FRETE
+			PLUGIN
+				https://luasoft.com.br/product/frete-para-marketplace-woocommerce/
+		
+
+https://imasters.com.br/back-end/sparks-abrindo-novos-horizontes-para-o-codeigniter
+https://codeigniter.com/user_guide/tutorial/index.html
+
+			
+			
+			

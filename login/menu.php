@@ -39,7 +39,10 @@ var wMenuWeb = {
     }
   },
   "submenu": [
-    { id:"/ts/tsweb/clientes.php", value: "Clientes"}
+    { id:"/ts/tsweb/empresa.php", value: "Empresas"},
+    { id:"/ts/tsweb/aplicacao.php", value: "Aplicações"},
+    { id:"/ts/tsweb/aplicacaoempresa.php", value: "Apli x Empresa"},
+    { id:"/ts/tsweb/cliente.php", value: "Clientes"}
     
   ]
 };
